@@ -36,7 +36,7 @@ public class LoginDefs implements En {
         When("^I click Login button without entering data into Username and Password field$", () -> {
             loginPage.clickLoginBtn();
         });
-        Then("^A message \"([^\"]*)\" is displayed$", (String arg0) -> {
+        Then("^A message \"([^\"]*)\" is displayed$", (String warningMessage) -> {
             Assert.assertEquals(AlertHelper.getTextAlert(), "Please enter username!");
         });
     }

@@ -11,4 +11,4 @@ Feature: Validate Login page
 
   Scenario: DA_LOGIN_TC010 - Verify that the page works correctly for the case when no input entered to Password and Username field
     When I click Login button without entering data into Username and Password field
-    Then A message "Please enter username" is displayed
+    Then A message "Please enter username!" is displayed
