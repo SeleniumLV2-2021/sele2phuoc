@@ -3,6 +3,7 @@ package com.test.definitions;
 import com.test.Constant.Constant;
 import com.test.Page.GeneralPage;
 import com.test.Page.LoginPage;
+import com.test.common.AlertHelper;
 import cucumber.api.java8.En;
 import org.testng.Assert;
 
@@ -31,6 +32,12 @@ public class LoginDefs implements En {
         Then("^The Dashboard Main page appears$", () -> {
             Assert.assertTrue(loginPage.isLogoutBtnExist());
 
+        });
+        When("^I click Login button without entering data into Username and Password field$", () -> {
+            loginPage.clickLoginBtn();
+        });
+        Then("^A message \"([^\"]*)\" is displayed$", (String arg0) -> {
+            Assert.assertEquals(AlertHelper.getTextAlert(), "Please enter username!");
         });
     }
 }
