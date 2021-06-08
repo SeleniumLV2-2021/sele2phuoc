@@ -15,4 +15,3 @@ public class LoginTest extends TestBase {
     public void beforeClass() {
     }
 }
-
